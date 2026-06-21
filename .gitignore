@@ -1,0 +1,14 @@
+# Godot 4 generated files
+.godot/
+builds/
+*.uid
+
+# Import files are auto-generated
+*.import
+
+# GodotSteam - add manually from releases
+addons/godotsteam/
+
+# OS
+.DS_Store
+Thumbs.db

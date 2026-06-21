@@ -93,6 +93,7 @@ func _go_to(node_id: String) -> void:
 	# Collect clue if defined
 	if node.has("collect_clue"):
 		GameState.collect_clue(node["collect_clue"])
+		AudioManager.play_sfx("clue_found")
 	# Add journal entry if defined
 	if node.has("journal_entry"):
 		GameState.add_journal_entry(node["journal_entry"])

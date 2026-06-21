@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" width="256" height="320">
+  <rect width="256" height="320" fill="#0c0b0e"/>
+  <!-- Rumpled journalist coat - ink stains, worn -->
+  <rect x="12" y="212" width="232" height="128" fill="#14121c" rx="5"/>
+  <rect x="30" y="191" width="196" height="149" fill="#1a1824" rx="4"/>
+  <!-- Loosened cravat - he works long hours -->
+  <rect x="100" y="188" width="56" height="34" fill="#b0a890" rx="3" transform="rotate(3 100 188)"/>
+  <!-- Ink stain on coat -->
+  <ellipse cx="70" cy="240" rx="16" ry="10" fill="#080808" opacity="0.5"/>
+  <!-- Neck -->
+  <rect x="110" y="174" width="36" height="28" fill="#c0a078"/>
+  <!-- Head - angular, always thinking -->
+  <ellipse cx="128" cy="146" rx="66" ry="76" fill="#c0a078"/>
+  <!-- Hair - dark, slightly too long, always a bit of a mess -->
+  <ellipse cx="128" cy="78" rx="66" ry="35" fill="#1e1c28"/>
+  <rect x="62" y="78" width="22" height="65" fill="#1e1c28" rx="4"/>
+  <rect x="172" y="78" width="22" height="58" fill="#1e1c28" rx="4"/>
+  <!-- Swept back but bit escaped -->
+  <path d="M90 92 Q108 86 118 96" stroke="#2a2834" stroke-width="4" fill="none"/>
+  <path d="M62 88 Q80 78 96 84" stroke="#1e1c28" stroke-width="3" fill="none"/>
+  <!-- Eyes - sharp, journalist's eyes, always observing -->
+  <ellipse cx="100" cy="150" rx="16" ry="13" fill="#eae0d0"/>
+  <ellipse cx="156" cy="150" rx="16" ry="13" fill="#eae0d0"/>
+  <!-- Intelligent eyes - darker shade -->
+  <ellipse cx="100" cy="152" rx="10" ry="9" fill="#2c3840"/>
+  <ellipse cx="156" cy="152" rx="10" ry="9" fill="#2c3840"/>
+  <ellipse cx="100" cy="153" rx="6" ry="6" fill="#080c0e"/>
+  <ellipse cx="156" cy="153" rx="6" ry="6" fill="#080c0e"/>
+  <ellipse cx="98" cy="151" rx="2.5" ry="2.5" fill="#d8d0c0" opacity="0.55"/>
+  <ellipse cx="154" cy="151" rx="2.5" ry="2.5" fill="#d8d0c0" opacity="0.55"/>
+  <!-- Eyebrows - often raised in surprise or thinking -->
+  <path d="M83 135 Q100 130 117 136" stroke="#1e1c28" stroke-width="3" fill="none"/>
+  <path d="M139 136 Q156 130 173 135" stroke="#1e1c28" stroke-width="3" fill="none"/>
+  <!-- Nose - long, thin -->
+  <path d="M128 160 L124 175 L128 180 L132 175 L128 160" fill="#a88058" opacity="0.45"/>
+  <!-- Mouth - pursed, thinking -->
+  <path d="M108 193 Q128 196 148 193" stroke="#8a6040" stroke-width="2" fill="none"/>
+  <!-- Thin stubble - forgets to shave when on a story -->
+  <ellipse cx="128" cy="190" rx="44" ry="24" fill="#1e1c28" opacity="0.12"/>
+  <!-- Ink smudge on forehead - occupational hazard -->
+  <ellipse cx="110" cy="118" rx="12" ry="6" fill="#080808" opacity="0.25"/>
+  <!-- Spectacles - round, wire frame, half-pushed down nose -->
+  <circle cx="100" cy="152" r="20" fill="none" stroke="#5a5040" stroke-width="2.5"/>
+  <circle cx="156" cy="152" r="20" fill="none" stroke="#5a5040" stroke-width="2.5"/>
+  <line x1="120" y1="152" x2="136" y2="152" stroke="#5a5040" stroke-width="2.5"/>
+  <line x1="80" y1="148" x2="66" y2="144" stroke="#5a5040" stroke-width="2"/>
+  <line x1="176" y1="148" x2="190" y2="144" stroke="#5a5040" stroke-width="2"/>
+</svg>

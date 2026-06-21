@@ -27,8 +27,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		if _typing:
 			_finish_typing()
 		elif choices_container.visible:
-			pass # Wait for choice button press
+			pass
 		else:
+			AudioManager.play_sfx("dialogue_click")
 			DialogueManager.advance()
 
 func _on_dialogue_started(_id: String) -> void:

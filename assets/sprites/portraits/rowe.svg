@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" width="256" height="320">
+  <rect width="256" height="320" fill="#0c0c10"/>
+  <!-- Police uniform - navy blue -->
+  <rect x="10" y="210" width="236" height="130" fill="#0c1018" rx="6"/>
+  <rect x="30" y="188" width="196" height="152" fill="#101420" rx="5"/>
+  <!-- Brass buttons -->
+  <circle cx="128" cy="220" r="6" fill="#8a7830"/>
+  <circle cx="128" cy="248" r="6" fill="#8a7830"/>
+  <circle cx="128" cy="276" r="6" fill="#8a7830"/>
+  <!-- High collar -->
+  <rect x="96" y="182" width="64" height="36" fill="#101820" rx="3"/>
+  <!-- Neck -->
+  <rect x="110" y="168" width="36" height="26" fill="#b89070"/>
+  <!-- Head - square-jawed, officious -->
+  <ellipse cx="128" cy="136" rx="66" ry="78" fill="#b89070"/>
+  <!-- Hair - short regulation cut, dark -->
+  <ellipse cx="128" cy="68" rx="64" ry="30" fill="#181420"/>
+  <rect x="64" y="68" width="22" height="50" fill="#181420" rx="2"/>
+  <rect x="170" y="68" width="22" height="50" fill="#181420" rx="2"/>
+  <!-- Policeman's helmet ridge at top of head -->
+  <rect x="70" y="58" width="116" height="16" fill="#0e1018" rx="4"/>
+  <rect x="80" y="48" width="96" height="14" fill="#101420" rx="3"/>
+  <!-- Eyes - cold, dismissive -->
+  <ellipse cx="100" cy="142" rx="15" ry="12" fill="#e4dccc"/>
+  <ellipse cx="156" cy="142" rx="15" ry="12" fill="#e4dccc"/>
+  <ellipse cx="100" cy="144" rx="9" ry="9" fill="#304050"/>
+  <ellipse cx="156" cy="144" rx="9" ry="9" fill="#304050"/>
+  <ellipse cx="100" cy="145" rx="5" ry="5" fill="#080c10"/>
+  <ellipse cx="156" cy="145" rx="5" ry="5" fill="#080c10"/>
+  <!-- Eyebrows - straight, authoritative -->
+  <rect x="83" y="128" width="34" height="5" fill="#181420" rx="2"/>
+  <rect x="139" y="128" width="34" height="5" fill="#181420" rx="2"/>
+  <!-- Square jaw -->
+  <path d="M62 152 Q62 188 128 212 Q194 188 194 152" fill="#b89070" opacity="0.25"/>
+  <!-- Nose - broad, flat -->
+  <rect x="120" y="158" width="16" height="18" fill="#a88060" opacity="0.4" rx="3"/>
+  <!-- Mouth - thin, downturned, disapproving -->
+  <path d="M106 188 Q128 184 150 188" stroke="#906050" stroke-width="2.5" fill="none"/>
+  <!-- Moustache - regulation handlebar -->
+  <path d="M95 183 Q108 178 122 183 Q128 180 134 183 Q148 178 161 183" stroke="#181420" stroke-width="4" fill="none"/>
+  <!-- Jowls hint - well-fed -->
+  <ellipse cx="76" cy="170" rx="16" ry="14" fill="#a88060" opacity="0.25"/>
+  <ellipse cx="180" cy="170" rx="16" ry="14" fill="#a88060" opacity="0.25"/>
+</svg>

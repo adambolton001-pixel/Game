@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" width="256" height="320">
+  <rect width="256" height="320" fill="#0a0908"/>
+  <!-- Rough coat, worn, stained -->
+  <rect x="10" y="215" width="236" height="125" fill="#14100c" rx="6"/>
+  <rect x="28" y="196" width="200" height="144" fill="#1a1610" rx="5"/>
+  <!-- Dirty neckerchief -->
+  <rect x="95" y="192" width="66" height="36" fill="#3a2c18" rx="3"/>
+  <polygon points="128,224 100,196 156,196" fill="#2a2010"/>
+  <!-- Neck - thick, scarred -->
+  <rect x="108" y="175" width="40" height="28" fill="#a87850"/>
+  <!-- Head - rough, beaten-up look -->
+  <ellipse cx="128" cy="142" rx="70" ry="80" fill="#a87850"/>
+  <!-- Hair - short, lank, dirty -->
+  <ellipse cx="128" cy="72" rx="68" ry="32" fill="#1c1408"/>
+  <rect x="60" y="72" width="24" height="50" fill="#1c1408" rx="3"/>
+  <rect x="172" y="72" width="24" height="46" fill="#1c1408" rx="3"/>
+  <!-- Stubble - heavy -->
+  <ellipse cx="128" cy="180" rx="58" ry="38" fill="#1c1408" opacity="0.3"/>
+  <ellipse cx="128" cy="190" rx="48" ry="28" fill="#1c1408" opacity="0.25"/>
+  <!-- Eyes - shifty, darting left -->
+  <ellipse cx="96" cy="148" rx="16" ry="13" fill="#e0d4c0"/>
+  <ellipse cx="152" cy="148" rx="16" ry="13" fill="#e0d4c0"/>
+  <!-- Eyes darting - pupils off-center -->
+  <ellipse cx="92" cy="150" rx="10" ry="9" fill="#4a3010"/>
+  <ellipse cx="148" cy="150" rx="10" ry="9" fill="#4a3010"/>
+  <ellipse cx="90" cy="151" rx="6" ry="6" fill="#0a0804"/>
+  <ellipse cx="146" cy="151" rx="6" ry="6" fill="#0a0804"/>
+  <!-- Bags under eyes -->
+  <ellipse cx="96" cy="160" rx="14" ry="5" fill="#886040" opacity="0.45"/>
+  <ellipse cx="152" cy="160" rx="14" ry="5" fill="#886040" opacity="0.45"/>
+  <!-- Eyebrows - bushy, unkempt -->
+  <path d="M78 133 Q96 128 114 135" stroke="#1c1408" stroke-width="4.5" fill="none"/>
+  <path d="M138 135 Q156 128 174 133" stroke="#1c1408" stroke-width="4.5" fill="none"/>
+  <!-- Broken nose - crooked -->
+  <path d="M128 158 L120 172 L124 176 L132 176 L136 172 L128 158" fill="#906040" opacity="0.5"/>
+  <!-- Scar on left cheek -->
+  <line x1="72" y1="162" x2="88" y2="178" stroke="#805030" stroke-width="2.5" opacity="0.6"/>
+  <!-- Mouth - thin, nervous -->
+  <path d="M105 194 Q128 198 151 194" stroke="#784030" stroke-width="2.5" fill="none"/>
+  <!-- Cap on head -->
+  <ellipse cx="128" cy="76" rx="70" ry="22" fill="#1a1408"/>
+  <rect x="58" y="60" width="140" height="22" fill="#161008" rx="3"/>
+  <rect x="55" y="76" width="146" height="12" fill="#1a1408"/>
+  <!-- Cap brim -->
+  <rect x="50" y="82" width="90" height="10" fill="#100e06" rx="2"/>
+</svg>

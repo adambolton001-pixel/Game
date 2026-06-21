@@ -11,10 +11,21 @@ signal room_ready(room_id: String)
 func _ready() -> void:
 	GameState.current_room = room_id
 	_restore_clue_state()
-	if ambient_track != "":
-		pass # Audio system wires in here
+	_load_background()
+	AudioManager.play_ambient(room_id)
 	await get_tree().physics_frame
 	room_ready.emit(room_id)
+
+func _load_background() -> void:
+	if room_id == "":
+		return
+	var bg_node := get_node_or_null("Background") as Sprite2D
+	if not bg_node:
+		return
+	var path := "res://assets/backgrounds/%s.svg" % room_id
+	if ResourceLoader.exists(path):
+		bg_node.texture = load(path)
+		bg_node.position = Vector2(960, 540)
 
 func _restore_clue_state() -> void:
 	# Hide any clue items already collected

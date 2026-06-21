@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <radialGradient id="firelight" cx="18%" cy="75%" r="40%">
+      <stop offset="0%" stop-color="#c45a0a" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#7a3005" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1a0a02" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1f16"/>
+      <stop offset="100%" stop-color="#1c1510"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1510"/>
+      <stop offset="100%" stop-color="#120e0a"/>
+    </linearGradient>
+    <linearGradient id="ceilingGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#150f0a"/>
+      <stop offset="100%" stop-color="#221810"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ceiling -->
+  <rect width="1920" height="200" fill="url(#ceilingGrad)"/>
+  <!-- Ceiling cornicing -->
+  <rect y="190" width="1920" height="15" fill="#2a1e14"/>
+  <rect y="200" width="1920" height="6" fill="#1c1410"/>
+
+  <!-- Walls - Victorian wallpaper (dark green/burgundy damask feel) -->
+  <rect y="200" width="1920" height="620" fill="url(#wallGrad)"/>
+  <!-- Wallpaper pattern rows -->
+  <g fill="#2e2018" opacity="0.4">
+    <rect x="60" y="240" width="30" height="50" rx="15"/>   <rect x="180" y="240" width="30" height="50" rx="15"/>   <rect x="300" y="240" width="30" height="50" rx="15"/>
+    <rect x="420" y="240" width="30" height="50" rx="15"/>   <rect x="540" y="240" width="30" height="50" rx="15"/>   <rect x="660" y="240" width="30" height="50" rx="15"/>
+    <rect x="780" y="240" width="30" height="50" rx="15"/>   <rect x="900" y="240" width="30" height="50" rx="15"/>   <rect x="1020" y="240" width="30" height="50" rx="15"/>
+    <rect x="1140" y="240" width="30" height="50" rx="15"/>  <rect x="1260" y="240" width="30" height="50" rx="15"/>  <rect x="1380" y="240" width="30" height="50" rx="15"/>
+    <rect x="1500" y="240" width="30" height="50" rx="15"/>  <rect x="1620" y="240" width="30" height="50" rx="15"/>  <rect x="1740" y="240" width="30" height="50" rx="15"/>
+    <rect x="1860" y="240" width="30" height="50" rx="15"/>
+    <rect x="120" y="330" width="20" height="40" rx="10"/>   <rect x="240" y="330" width="20" height="40" rx="10"/>   <rect x="360" y="330" width="20" height="40" rx="10"/>
+    <rect x="480" y="330" width="20" height="40" rx="10"/>   <rect x="600" y="330" width="20" height="40" rx="10"/>   <rect x="720" y="330" width="20" height="40" rx="10"/>
+    <rect x="840" y="330" width="20" height="40" rx="10"/>   <rect x="960" y="330" width="20" height="40" rx="10"/>   <rect x="1080" y="330" width="20" height="40" rx="10"/>
+    <rect x="1200" y="330" width="20" height="40" rx="10"/>  <rect x="1320" y="330" width="20" height="40" rx="10"/>  <rect x="1440" y="330" width="20" height="40" rx="10"/>
+    <rect x="1560" y="330" width="20" height="40" rx="10"/>  <rect x="1680" y="330" width="20" height="40" rx="10"/>  <rect x="1800" y="330" width="20" height="40" rx="10"/>
+    <rect x="1920" y="330" width="20" height="40" rx="10"/>
+    <rect x="60" y="410" width="30" height="50" rx="15"/>    <rect x="180" y="410" width="30" height="50" rx="15"/>   <rect x="300" y="410" width="30" height="50" rx="15"/>
+    <rect x="420" y="410" width="30" height="50" rx="15"/>   <rect x="540" y="410" width="30" height="50" rx="15"/>   <rect x="660" y="410" width="30" height="50" rx="15"/>
+    <rect x="780" y="410" width="30" height="50" rx="15"/>   <rect x="900" y="410" width="30" height="50" rx="15"/>   <rect x="1020" y="410" width="30" height="50" rx="15"/>
+    <rect x="1140" y="410" width="30" height="50" rx="15"/>  <rect x="1260" y="410" width="30" height="50" rx="15"/>  <rect x="1380" y="410" width="30" height="50" rx="15"/>
+    <rect x="1500" y="410" width="30" height="50" rx="15"/>  <rect x="1620" y="410" width="30" height="50" rx="15"/>  <rect x="1740" y="410" width="30" height="50" rx="15"/>
+  </g>
+  <!-- Chair rail -->
+  <rect y="570" width="1920" height="8" fill="#3a2818"/>
+  <rect y="575" width="1920" height="3" fill="#2a1e12"/>
+  <rect y="578" width="1920" height="3" fill="#4a3820"/>
+
+  <!-- Fireplace - left side -->
+  <rect x="60" y="400" width="260" height="420" fill="#160f0a"/>
+  <rect x="80" y="420" width="220" height="380" fill="#1a1208"/>
+  <!-- Firebox -->
+  <rect x="100" y="600" width="180" height="180" fill="#0a0604" rx="5"/>
+  <!-- Fire glow -->
+  <ellipse cx="190" cy="750" rx="70" ry="50" fill="#c04010" opacity="0.8"/>
+  <ellipse cx="190" cy="740" rx="50" ry="35" fill="#e06020" opacity="0.7"/>
+  <ellipse cx="190" cy="730" rx="35" ry="25" fill="#f09030" opacity="0.6"/>
+  <ellipse cx="190" cy="720" rx="20" ry="18" fill="#ffe080" opacity="0.5"/>
+  <!-- Mantelpiece -->
+  <rect x="50" y="390" width="280" height="25" fill="#3a2818"/>
+  <rect x="40" y="380" width="300" height="18" fill="#4a3020"/>
+  <!-- Mantel items: small clock silhouette -->
+  <rect x="155" y="340" width="60" height="45" fill="#2a1e14" rx="5"/>
+  <rect x="163" y="345" width="44" height="33" fill="#1a1208" rx="3"/>
+  <circle cx="185" cy="363" r="12" fill="#120e08" stroke="#3a2818" stroke-width="1"/>
+
+  <!-- Bookshelf - right wall area -->
+  <rect x="1580" y="220" width="300" height="600" fill="#1c140e"/>
+  <g fill="#140e09" stroke="#2a1e12" stroke-width="1">
+    <rect x="1590" y="240" width="280" height="70"/>
+    <rect x="1590" y="320" width="280" height="70"/>
+    <rect x="1590" y="400" width="280" height="70"/>
+    <rect x="1590" y="480" width="280" height="70"/>
+    <rect x="1590" y="560" width="280" height="70"/>
+    <rect x="1590" y="640" width="280" height="70"/>
+  </g>
+  <!-- Book spines -->
+  <g opacity="0.7">
+    <rect x="1598" y="248" width="18" height="56" fill="#3a1010"/> <rect x="1620" y="248" width="22" height="56" fill="#102a20"/> <rect x="1646" y="248" width="16" height="56" fill="#2a2010"/> <rect x="1666" y="248" width="20" height="56" fill="#1a1040"/> <rect x="1690" y="248" width="24" height="56" fill="#301010"/> <rect x="1718" y="248" width="18" height="56" fill="#0a1a10"/> <rect x="1740" y="248" width="22" height="56" fill="#1a0a20"/> <rect x="1766" y="248" width="16" height="56" fill="#2a1a08"/> <rect x="1786" y="248" width="20" height="56" fill="#0a2a18"/> <rect x="1810" y="248" width="24" height="56" fill="#1a0810"/> <rect x="1838" y="248" width="18" height="56" fill="#201808"/> <rect x="1860" y="248" width="14" height="56" fill="#102018"/>
+    <rect x="1598" y="328" width="20" height="56" fill="#0a1020"/> <rect x="1622" y="328" width="18" height="56" fill="#2a1808"/> <rect x="1644" y="328" width="24" height="56" fill="#101820"/> <rect x="1672" y="328" width="16" height="56" fill="#301808"/> <rect x="1692" y="328" width="22" height="56" fill="#0a2010"/> <rect x="1718" y="328" width="18" height="56" fill="#201010"/> <rect x="1740" y="328" width="20" height="56" fill="#102808"/> <rect x="1764" y="328" width="24" height="56" fill="#1a0808"/> <rect x="1792" y="328" width="16" height="56" fill="#0a1830"/> <rect x="1812" y="328" width="22" height="56" fill="#281608"/> <rect x="1838" y="328" width="18" height="56" fill="#081018"/> <rect x="1860" y="328" width="14" height="56" fill="#181008"/>
+  </g>
+
+  <!-- Armchair -->
+  <rect x="780" y="680" width="200" height="140" fill="#2a1810" rx="10"/>
+  <rect x="760" y="630" width="240" height="80" fill="#3a2018" rx="8"/>
+  <rect x="760" y="630" width="30" height="200" fill="#3a2018" rx="5"/>
+  <rect x="970" y="630" width="30" height="200" fill="#3a2018" rx="5"/>
+
+  <!-- Small table -->
+  <rect x="1050" y="740" width="120" height="80" fill="#2a1e12" rx="4"/>
+  <rect x="1055" y="815" width="8" height="100" fill="#1e1610"/>
+  <rect x="1162" y="815" width="8" height="100" fill="#1e1610"/>
+
+  <!-- Floor - dark wood planks -->
+  <rect y="820" width="1920" height="260" fill="url(#floorGrad)"/>
+  <g stroke="#180d08" stroke-width="1" fill="none" opacity="0.5">
+    <line x1="0" y1="850" x2="1920" y2="850"/>
+    <line x1="0" y1="880" x2="1920" y2="880"/>
+    <line x1="0" y1="910" x2="1920" y2="910"/>
+    <line x1="0" y1="940" x2="1920" y2="940"/>
+    <line x1="0" y1="975" x2="1920" y2="975"/>
+    <line x1="0" y1="1010" x2="1920" y2="1010"/>
+    <line x1="0" y1="1045" x2="1920" y2="1045"/>
+    <line x1="300" y1="820" x2="280" y2="1080"/>
+    <line x1="700" y1="820" x2="690" y2="1080"/>
+    <line x1="1100" y1="820" x2="1100" y2="1080"/>
+    <line x1="1500" y1="820" x2="1510" y2="1080"/>
+    <line x1="1800" y1="820" x2="1820" y2="1080"/>
+  </g>
+  <!-- Floor skirting -->
+  <rect y="814" width="1920" height="10" fill="#3a2818"/>
+
+  <!-- Firelight glow overlay -->
+  <rect width="1920" height="1080" fill="url(#firelight)"/>
+
+  <!-- Window - centre, night outside -->
+  <rect x="820" y="230" width="280" height="380" fill="#0a0a14"/>
+  <rect x="820" y="230" width="280" height="380" fill="#12122a" opacity="0.5"/>
+  <!-- Window frame -->
+  <rect x="810" y="220" width="300" height="400" fill="none" stroke="#3a2818" stroke-width="16"/>
+  <line x1="960" y1="220" x2="960" y2="620" stroke="#3a2818" stroke-width="8"/>
+  <line x1="810" y1="420" x2="1110" y2="420" stroke="#3a2818" stroke-width="8"/>
+  <!-- Window: fog outside -->
+  <rect x="820" y="230" width="280" height="380" fill="#151528" opacity="0.3"/>
+
+  <!-- Curtains -->
+  <rect x="790" y="210" width="80" height="440" fill="#1e1428" opacity="0.95"/>
+  <rect x="1050" y="210" width="80" height="440" fill="#1e1428" opacity="0.95"/>
+  <path d="M790 210 Q830 260 790 310 Q830 360 790 410 Q830 460 790 510 Q830 560 790 610 L810 610 Q840 560 810 510 Q840 460 810 410 Q840 360 810 310 Q840 260 810 210 Z" fill="#160e20"/>
+  <path d="M1130 210 Q1090 260 1130 310 Q1090 360 1130 410 Q1090 460 1130 510 Q1090 560 1130 610 L1110 610 Q1080 560 1110 510 Q1080 460 1110 410 Q1080 360 1110 310 Q1080 260 1110 210 Z" fill="#160e20"/>
+
+  <!-- Foreground shadow -->
+  <rect y="1000" width="1920" height="80" fill="#050304" opacity="0.8"/>
+</svg>

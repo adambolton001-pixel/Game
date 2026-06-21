@@ -19,6 +19,7 @@ DialogueManager="*res://scripts/autoloads/DialogueManager.gd"
 LanternSystem="*res://scripts/autoloads/LanternSystem.gd"
 SteamManager="*res://scripts/autoloads/SteamManager.gd"
 SceneManager="*res://scripts/autoloads/SceneManager.gd"
+AudioManager="*res://scripts/autoloads/AudioManager.gd"
 
 [display]
 

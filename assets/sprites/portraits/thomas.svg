@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" width="256" height="320">
+  <rect width="256" height="320" fill="#0d0c0f"/>
+  <!-- Coat - plain, working class boy -->
+  <rect x="20" y="230" width="216" height="110" fill="#181420" rx="6"/>
+  <rect x="45" y="210" width="166" height="130" fill="#1c1824" rx="5"/>
+  <!-- Simple shirt collar -->
+  <rect x="104" y="203" width="48" height="35" fill="#c8c0b0" rx="3"/>
+  <!-- Neck - thinner, younger -->
+  <rect x="112" y="186" width="32" height="28" fill="#c4a882"/>
+  <!-- Head - young, angular, worried expression -->
+  <ellipse cx="128" cy="148" rx="60" ry="74" fill="#c4a882"/>
+  <!-- Hair - dark, slightly unkempt, longer than his father's -->
+  <ellipse cx="128" cy="82" rx="62" ry="38" fill="#1e1820"/>
+  <rect x="66" y="82" width="20" height="66" fill="#1e1820" rx="3"/>
+  <rect x="170" y="82" width="20" height="60" fill="#1e1820" rx="3"/>
+  <!-- Fringe across forehead -->
+  <ellipse cx="128" cy="95" rx="50" ry="22" fill="#221c24"/>
+  <rect x="85" y="88" width="86" height="18" fill="#1e1820"/>
+  <!-- Eyes - wide, expressive, scared -->
+  <ellipse cx="102" cy="152" rx="15" ry="12" fill="#ece4d8"/>
+  <ellipse cx="154" cy="152" rx="15" ry="12" fill="#ece4d8"/>
+  <ellipse cx="102" cy="154" rx="10" ry="9" fill="#4a3828"/>
+  <ellipse cx="154" cy="154" rx="10" ry="9" fill="#4a3828"/>
+  <ellipse cx="102" cy="155" rx="6" ry="6" fill="#0c0808"/>
+  <ellipse cx="154" cy="155" rx="6" ry="6" fill="#0c0808"/>
+  <ellipse cx="100" cy="153" rx="2" ry="2" fill="#dcd4c8" opacity="0.6"/>
+  <ellipse cx="152" cy="153" rx="2" ry="2" fill="#dcd4c8" opacity="0.6"/>
+  <!-- Eyebrows - worried, slightly raised -->
+  <path d="M87 138 Q102 133 117 139" stroke="#1e1820" stroke-width="2.5" fill="none"/>
+  <path d="M139 139 Q154 133 169 138" stroke="#1e1820" stroke-width="2.5" fill="none"/>
+  <!-- Nose - boyish -->
+  <circle cx="120" cy="172" r="3.5" fill="#b09070" opacity="0.35"/>
+  <circle cx="136" cy="172" r="3.5" fill="#b09070" opacity="0.35"/>
+  <!-- Mouth - pressed together, trying to be strong -->
+  <path d="M110 190 Q128 193 146 190" stroke="#8a6848" stroke-width="2" fill="none"/>
+  <!-- Jaw - still soft, young -->
+  <path d="M68 158 Q68 190 128 218 Q188 190 188 158" fill="#c4a882" opacity="0.3"/>
+</svg>

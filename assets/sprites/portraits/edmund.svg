@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 320" width="256" height="320">
+  <!-- Background -->
+  <rect width="256" height="320" fill="#0d0b10"/>
+  <!-- Shoulders / coat -->
+  <rect x="20" y="220" width="216" height="120" fill="#1a1520" rx="8"/>
+  <rect x="40" y="200" width="176" height="140" fill="#1e1828" rx="6"/>
+  <!-- Collar / cravat -->
+  <rect x="100" y="195" width="56" height="40" fill="#e8e0d0" rx="4"/>
+  <polygon points="128,230 108,200 148,200" fill="#c8b89c"/>
+  <!-- Neck -->
+  <rect x="108" y="175" width="40" height="30" fill="#c8a888"/>
+  <!-- Head -->
+  <ellipse cx="128" cy="150" rx="68" ry="78" fill="#c8a888"/>
+  <!-- Hair - dark, disheveled -->
+  <ellipse cx="128" cy="86" rx="66" ry="42" fill="#1a1218"/>
+  <rect x="62" y="86" width="22" height="60" fill="#1a1218" rx="4"/>
+  <rect x="172" y="86" width="22" height="55" fill="#1a1218" rx="4"/>
+  <rect x="62" y="86" width="30" height="40" fill="#221a20" rx="3"/>
+  <!-- Sideburns -->
+  <rect x="60" y="130" width="18" height="35" fill="#221a20" rx="4"/>
+  <rect x="178" y="130" width="18" height="35" fill="#221a20" rx="4"/>
+  <!-- Eyes - deep-set, haunted -->
+  <ellipse cx="100" cy="152" rx="16" ry="12" fill="#f0e8dc"/>
+  <ellipse cx="156" cy="152" rx="16" ry="12" fill="#f0e8dc"/>
+  <ellipse cx="100" cy="154" rx="10" ry="9" fill="#5a3a28"/>
+  <ellipse cx="156" cy="154" rx="10" ry="9" fill="#5a3a28"/>
+  <ellipse cx="100" cy="155" rx="6" ry="6" fill="#1a1010"/>
+  <ellipse cx="156" cy="155" rx="6" ry="6" fill="#1a1010"/>
+  <ellipse cx="98" cy="153" rx="2" ry="2" fill="#e0d8c8" opacity="0.5"/>
+  <ellipse cx="154" cy="153" rx="2" ry="2" fill="#e0d8c8" opacity="0.5"/>
+  <!-- Under-eye shadows - grief -->
+  <ellipse cx="100" cy="162" rx="14" ry="5" fill="#9a7858" opacity="0.4"/>
+  <ellipse cx="156" cy="162" rx="14" ry="5" fill="#9a7858" opacity="0.4"/>
+  <!-- Eyebrows - furrowed -->
+  <path d="M84 140 Q100 135 116 140" stroke="#1a1218" stroke-width="3" fill="none"/>
+  <path d="M140 140 Q156 135 172 140" stroke="#1a1218" stroke-width="3" fill="none"/>
+  <!-- Nose -->
+  <ellipse cx="128" cy="170" rx="8" ry="10" fill="#b89878" opacity="0.4"/>
+  <circle cx="122" cy="178" r="4" fill="#a88868" opacity="0.3"/>
+  <circle cx="134" cy="178" r="4" fill="#a88868" opacity="0.3"/>
+  <!-- Mouth - thin, grim -->
+  <path d="M110 192 Q128 198 146 192" stroke="#8a6848" stroke-width="2" fill="none"/>
+  <path d="M114 193 Q128 196 142 193" stroke="#c8a888" stroke-width="1" fill="none"/>
+  <!-- Stubble -->
+  <ellipse cx="128" cy="196" rx="36" ry="20" fill="#1a1218" opacity="0.15"/>
+  <!-- Wrinkle on forehead -->
+  <path d="M105 128 Q128 124 151 128" stroke="#a88868" stroke-width="1" fill="none" opacity="0.4"/>
+  <!-- Lamp glow tint -->
+  <ellipse cx="90" cy="140" rx="40" ry="50" fill="#c8860a" opacity="0.05"/>
+</svg>
