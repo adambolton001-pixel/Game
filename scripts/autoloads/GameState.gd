@@ -52,7 +52,7 @@ func load_save() -> bool:
 	var file := FileAccess.open(SAVE_PATH, FileAccess.READ)
 	if not file:
 		return false
-	var result := JSON.parse_string(file.get_as_text())
+	var result: Variant = JSON.parse_string(file.get_as_text())
 	if not result is Dictionary:
 		return false
 	clues_collected = result.get("clues", [])

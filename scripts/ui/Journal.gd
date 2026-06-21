@@ -24,8 +24,7 @@ func _add_entry_label(text: String) -> void:
 	lbl.text = "— " + text
 	lbl.fit_content = true
 	lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	entry_list.add_child(entry_list.get_child_count() == 0, lbl)
-	# Always add at top so newest is first
+	entry_list.add_child(lbl)
 	entry_list.move_child(lbl, 0)
 
 func toggle() -> void:
