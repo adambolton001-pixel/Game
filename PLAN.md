@@ -1,4 +1,14 @@
-# 2D Mystery Adventure Game — Implementation Plan
+# The Pale Lantern — Implementation Plan
+
+## Game Overview
+- **Title:** The Pale Lantern
+- **Player character:** Edmund Hale, a newspaper typesetter
+- **Genre:** Dark atmospheric Victorian murder mystery
+- **Setting:** A London-style Victorian city — foggy streets, gaslit alleys, gothic architecture
+- **Premise:** Edmund is drawn into a murder investigation when someone close to him is found dead. An ordinary man with no power or authority, he must navigate a city of secrets using only his wits and access to information through his press connections.
+- **Tone:** Dark, moody, gothic — tense atmosphere, morally complex characters, real stakes
+
+---
 
 ## Stack
 - **Engine:** Godot 4 (GDScript)
