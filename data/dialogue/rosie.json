@@ -1,0 +1,75 @@
+{
+  "id": "rosie",
+  "start_node": "rosie_01",
+  "nodes": [
+    {
+      "id": "rosie_01",
+      "speaker": "Rosie",
+      "text": "Papa! You're home. Where's Mama? Thomas said she's visiting but she didn't say goodbye.",
+      "portrait": "rosie",
+      "next": "rosie_02"
+    },
+    {
+      "id": "rosie_02",
+      "speaker": "Rosie",
+      "text": "She always says goodbye.",
+      "portrait": "rosie",
+      "next": "rosie_choice"
+    },
+    {
+      "id": "rosie_choice",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "choices": [
+        {
+          "text": "She loves you very much, Rosie. You know that, don't you.",
+          "lantern": 2,
+          "next": "rosie_hug"
+        },
+        {
+          "text": "She had to go away for a while, sweetheart. We'll talk tomorrow.",
+          "lantern": 0,
+          "next": "rosie_confused"
+        },
+        {
+          "text": "[Can't do it. Walk away.]",
+          "lantern": -2,
+          "next": "rosie_alone",
+          "set_flags": [{ "name": "left_rosie_alone", "value": true }]
+        }
+      ]
+    },
+    {
+      "id": "rosie_hug",
+      "speaker": "Rosie",
+      "text": "I know, Papa. She tells me every night.",
+      "portrait": "rosie",
+      "next": "rosie_hug_02"
+    },
+    {
+      "id": "rosie_hug_02",
+      "speaker": "Rosie",
+      "text": "Your hands are shaking.",
+      "portrait": "rosie",
+      "next": "end",
+      "journal_entry": "Her hands are so small. I have to hold on to that."
+    },
+    {
+      "id": "rosie_confused",
+      "speaker": "Rosie",
+      "text": "Did she take her blue coat? She only goes long distances in the blue coat.",
+      "portrait": "rosie",
+      "next": "end",
+      "journal_entry": "Rosie noticed the coat was still here. Six years old and she noticed."
+    },
+    {
+      "id": "rosie_alone",
+      "speaker": "",
+      "text": "Edmund turns and goes upstairs. Rosie watches the door.",
+      "portrait": "",
+      "next": "end",
+      "journal_entry": "I couldn't face her. What does that make me?"
+    }
+  ]
+}

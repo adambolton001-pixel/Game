@@ -1,0 +1,166 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/HUD.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/ui/Inventory.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/ui/Journal.gd" id="3"]
+[ext_resource type="Script" path="res://scripts/ui/LanternMeter.gd" id="4"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1")
+layer = 5
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 60.0
+
+[node name="JournalBtn" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Journal"
+size_flags_horizontal = 3
+
+[node name="Dot" type="ColorRect" parent="Buttons/JournalBtn"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(1, 0.3, 0.1, 1)
+visible = false
+
+[node name="InventoryBtn" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Clues"
+size_flags_horizontal = 3
+
+[node name="LanternMeter" type="CanvasLayer" parent="."]
+script = ExtResource("4")
+layer = 5
+
+[node name="Flame" type="TextureProgressBar" parent="LanternMeter"]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 160.0
+fill_mode = 1
+value = 50.0
+
+[node name="FlickerTimer" type="Timer" parent="LanternMeter"]
+wait_time = 0.2
+autostart = false
+
+[node name="Inventory" type="CanvasLayer" parent="."]
+script = ExtResource("2")
+layer = 8
+visible = false
+
+[node name="Panel" type="PanelContainer" parent="Inventory"]
+anchor_left = 0.6
+anchor_top = 0.1
+anchor_right = 0.98
+anchor_bottom = 0.9
+
+[node name="HBox" type="HBoxContainer" parent="Inventory/Panel"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Inventory/Panel/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 0)
+size_flags_horizontal = 3
+
+[node name="Grid" type="GridContainer" parent="Inventory/Panel/HBox/ScrollContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Detail" type="VBoxContainer" parent="Inventory/Panel/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Icon" type="TextureRect" parent="Inventory/Panel/HBox/Detail"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 120)
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Name" type="Label" parent="Inventory/Panel/HBox/Detail"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="Description" type="RichTextLabel" parent="Inventory/Panel/HBox/Detail"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+fit_content = false
+
+[node name="Journal" type="CanvasLayer" parent="."]
+script = ExtResource("3")
+layer = 8
+visible = false
+
+[node name="Panel" type="PanelContainer" parent="Journal"]
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.55
+anchor_bottom = 0.95
+
+[node name="VBox" type="VBoxContainer" parent="Journal/Panel"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Journal/Panel/VBox"]
+layout_mode = 2
+text = "Edmund's Notes"
+theme_override_font_sizes/font_size = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Journal/Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Entries" type="VBoxContainer" parent="Journal/Panel/VBox/ScrollContainer"]
+layout_mode = 2
+
+[node name="NotificationDot" type="Control" parent="Journal"]
+visible = false
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+layer = 20
+visible = false
+
+[node name="BG" type="ColorRect" parent="PauseMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="Panel" type="PanelContainer" parent="PauseMenu"]
+anchor_left = 0.35
+anchor_top = 0.25
+anchor_right = 0.65
+anchor_bottom = 0.75
+
+[node name="VBox" type="VBoxContainer" parent="PauseMenu/Panel"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="PauseMenu/Panel/VBox"]
+layout_mode = 2
+text = "The Pale Lantern"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 24
+
+[node name="Resume" type="Button" parent="PauseMenu/Panel/VBox"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Save" type="Button" parent="PauseMenu/Panel/VBox"]
+layout_mode = 2
+text = "Save Game"
+
+[node name="MainMenu" type="Button" parent="PauseMenu/Panel/VBox"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="PauseMenu/Panel/VBox"]
+layout_mode = 2
+text = "Quit to Desktop"

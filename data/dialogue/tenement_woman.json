@@ -1,0 +1,118 @@
+{
+  "id": "tenement_woman",
+  "start_node": "mary_01",
+  "nodes": [
+    {
+      "id": "mary_01",
+      "speaker": "Mary Doyle",
+      "text": "I don't talk to people I don't know. Not round here.",
+      "portrait": "mary",
+      "next": "edmund_mary_01"
+    },
+    {
+      "id": "edmund_mary_01",
+      "speaker": "Edmund",
+      "text": "Clara Hale. She came here. She knew you.",
+      "portrait": "edmund",
+      "next": "mary_02"
+    },
+    {
+      "id": "mary_02",
+      "speaker": "Mary Doyle",
+      "text": "...",
+      "portrait": "mary",
+      "next": "mary_03"
+    },
+    {
+      "id": "mary_03",
+      "speaker": "Mary Doyle",
+      "text": "You're the husband. She showed me your photograph once.",
+      "portrait": "mary",
+      "next": "mary_04"
+    },
+    {
+      "id": "mary_04",
+      "speaker": "Mary Doyle",
+      "text": "She was good, your Clara. She listened. Wrote things down. Said she was going to make sure people heard.",
+      "portrait": "mary",
+      "next": "mary_05"
+    },
+    {
+      "id": "mary_05",
+      "speaker": "Mary Doyle",
+      "text": "Hargrove's buildings are killing people. The roof on number twelve caved in last winter. A child died. He paid the family to keep quiet.",
+      "portrait": "mary",
+      "next": "mary_06",
+      "collect_clue": "hargrove_tenement_record",
+      "journal_entry": "Hargrove paid to cover up a child's death in his tenements. Clara had this. This is what she was going to expose."
+    },
+    {
+      "id": "mary_06",
+      "speaker": "Mary Doyle",
+      "text": "She said she'd sent everything to the newspaper. Said they'd have to print it.",
+      "portrait": "mary",
+      "next": "mary_choice"
+    },
+    {
+      "id": "mary_choice",
+      "speaker": "Edmund",
+      "text": "They didn't print it. The editor buried it.",
+      "portrait": "edmund",
+      "next": "mary_07"
+    },
+    {
+      "id": "mary_07",
+      "speaker": "Mary Doyle",
+      "text": "...",
+      "portrait": "mary",
+      "next": "mary_08"
+    },
+    {
+      "id": "mary_08",
+      "speaker": "Mary Doyle",
+      "text": "Then someone told Hargrove what she was doing. And he sorted it.",
+      "portrait": "mary",
+      "next": "mary_09"
+    },
+    {
+      "id": "mary_09",
+      "speaker": "Mary Doyle",
+      "text": "Is that what happened to her? Tell me true.",
+      "portrait": "mary",
+      "next": "mary_truth_choice"
+    },
+    {
+      "id": "mary_truth_choice",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "choices": [
+        {
+          "text": "Yes. She was killed because of what she knew.",
+          "lantern": 1,
+          "next": "mary_truth_told"
+        },
+        {
+          "text": "I don't know yet. That's what I'm finding out.",
+          "lantern": 0,
+          "next": "mary_truth_maybe"
+        }
+      ]
+    },
+    {
+      "id": "mary_truth_told",
+      "speaker": "Mary Doyle",
+      "text": "I knew it. I told her it wasn't safe. She said someone had to.",
+      "portrait": "mary",
+      "next": "end",
+      "journal_entry": "Mary Doyle warned Clara it was dangerous. Clara went ahead anyway. Of course she did."
+    },
+    {
+      "id": "mary_truth_maybe",
+      "speaker": "Mary Doyle",
+      "text": "You find out. And then you make sure it matters. That's what she'd want.",
+      "portrait": "mary",
+      "next": "end"
+    }
+  ]
+}

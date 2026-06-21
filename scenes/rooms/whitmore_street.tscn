@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/rooms/RoomBase.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="3"]
+[ext_resource type="Script" path="res://scripts/objects/NPC.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/rooms/ExitTrigger.gd" id="5"]
+
+[node name="WhitmoreStreet" type="Node2D"]
+script = ExtResource("1")
+room_id = "whitmore_street"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(500, 600)
+
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(500, 600)
+
+[node name="HUD" parent="." instance=ExtResource("3")]
+
+[node name="MaryDoyle" type="Area2D" parent="."]
+script = ExtResource("4")
+npc_name = "Mary Doyle"
+dialogue_id = "tenement_woman"
+position = Vector2(850, 520)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaryDoyle"]
+
+[node name="ExitBack" type="Area2D" parent="."]
+script = ExtResource("5")
+target_room = "print_shop"
+position = Vector2(100, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitBack"]
+
+[node name="ExitToHargrove" type="Area2D" parent="."]
+script = ExtResource("5")
+target_room = "hargrove_estate"
+requires_flag = "hargrove_mentioned"
+requires_flag_value = true
+position = Vector2(1850, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitToHargrove"]

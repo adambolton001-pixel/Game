@@ -1,0 +1,108 @@
+{
+  "id": "silas_webb",
+  "start_node": "webb_01",
+  "nodes": [
+    {
+      "id": "webb_01",
+      "speaker": "Silas Webb",
+      "text": "Edmund. I heard about Clara. Terrible business.",
+      "portrait": "webb",
+      "next": "webb_02"
+    },
+    {
+      "id": "webb_02",
+      "speaker": "Silas Webb",
+      "text": "You look like you haven't slept in days. Are you alright?",
+      "portrait": "webb",
+      "next": "edmund_webb_01"
+    },
+    {
+      "id": "edmund_webb_01",
+      "speaker": "Edmund",
+      "text": "You've been covering the Ripper killings for two years. Every detail. The wounds. The patterns.",
+      "portrait": "edmund",
+      "next": "webb_03"
+    },
+    {
+      "id": "webb_03",
+      "speaker": "Silas Webb",
+      "text": "Yes, I've covered them. That's my job.",
+      "portrait": "webb",
+      "next": "edmund_webb_02"
+    },
+    {
+      "id": "edmund_webb_02",
+      "speaker": "Edmund",
+      "text": "Someone staged Clara's death to look like a Ripper killing. Whoever did it knew things that weren't in print.",
+      "portrait": "edmund",
+      "next": "webb_04"
+    },
+    {
+      "id": "webb_04",
+      "speaker": "Silas Webb",
+      "text": "...Edmund. I hope you're not suggesting—",
+      "portrait": "webb",
+      "next": "webb_approach"
+    },
+    {
+      "id": "webb_approach",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "choices": [
+        {
+          "text": "Where were you on the night of the fourteenth?",
+          "lantern": 0,
+          "next": "webb_alibi"
+        },
+        {
+          "text": "I saw you near Whitmore Street two weeks ago. What were you doing there?",
+          "lantern": 0,
+          "next": "webb_whitmore"
+        },
+        {
+          "text": "[Slam his notes onto the desk.] You know exactly what I'm suggesting.",
+          "lantern": -1,
+          "next": "webb_confronted"
+        }
+      ]
+    },
+    {
+      "id": "webb_alibi",
+      "speaker": "Silas Webb",
+      "text": "I was at the Anchor with four other journalists until one in the morning. You can verify it yourself.",
+      "portrait": "webb",
+      "next": "webb_genuine"
+    },
+    {
+      "id": "webb_whitmore",
+      "speaker": "Silas Webb",
+      "text": "I was following the Hargrove housing story. Different angle to your wife, but the same story. Edmund — Hargrove has connections everywhere. You need to be careful.",
+      "portrait": "webb",
+      "next": "webb_genuine"
+    },
+    {
+      "id": "webb_confronted",
+      "speaker": "Silas Webb",
+      "text": "I didn't kill Clara. Edmund, I liked her. She was a better journalist than either of us and she didn't even have the job.",
+      "portrait": "webb",
+      "next": "webb_genuine"
+    },
+    {
+      "id": "webb_genuine",
+      "speaker": "Silas Webb",
+      "text": "The unpublished detail you're thinking of — the specific wound pattern — I submitted it to Crane for the January edition. He killed that paragraph too.",
+      "portrait": "webb",
+      "next": "webb_genuine_02"
+    },
+    {
+      "id": "webb_genuine_02",
+      "speaker": "Silas Webb",
+      "text": "Someone with access to our unpublished copy could have had that detail. Not me, Edmund. Someone else.",
+      "portrait": "webb",
+      "next": "end",
+      "collect_clue": "webb_unpublished_detail",
+      "journal_entry": "Crane killed Webb's paragraph about the Ripper wound pattern. The copycat would have needed exactly that detail. Who sees copy before it prints? Arthur. Only Arthur."
+    }
+  ]
+}

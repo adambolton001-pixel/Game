@@ -1,0 +1,78 @@
+{
+  "id": "arthur_crane_01",
+  "start_node": "arthur_01",
+  "nodes": [
+    {
+      "id": "arthur_01",
+      "speaker": "Arthur Crane",
+      "text": "Edmund. Good God, man. Sit down. I heard this morning — I came as soon as I could.",
+      "portrait": "arthur",
+      "next": "arthur_02"
+    },
+    {
+      "id": "arthur_02",
+      "speaker": "Arthur Crane",
+      "text": "Clara was — she was a remarkable woman. I want you to know that everyone here feels this deeply.",
+      "portrait": "arthur",
+      "next": "edmund_01"
+    },
+    {
+      "id": "edmund_01",
+      "speaker": "Edmund",
+      "text": "It wasn't the Ripper, Arthur. The police closed it in minutes but something doesn't fit.",
+      "portrait": "edmund",
+      "next": "arthur_03"
+    },
+    {
+      "id": "arthur_03",
+      "speaker": "Arthur Crane",
+      "text": "Edmund...",
+      "portrait": "arthur",
+      "next": "arthur_04"
+    },
+    {
+      "id": "arthur_04",
+      "speaker": "Arthur Crane",
+      "text": "I understand the mind reaches for anything rather than accept the randomness of it. I've seen it before. With other families.",
+      "portrait": "arthur",
+      "next": "edmund_02"
+    },
+    {
+      "id": "edmund_02",
+      "speaker": "Edmund",
+      "text": "I set type on every Ripper story we've run. Every detail. The position of the body was wrong, Arthur. The wounds don't match the pattern.",
+      "portrait": "edmund",
+      "next": "arthur_05"
+    },
+    {
+      "id": "arthur_05",
+      "speaker": "Arthur Crane",
+      "text": "Then you should look into it. I mean that. If you're right — that's a story, Edmund. That's important.",
+      "portrait": "arthur",
+      "next": "arthur_06"
+    },
+    {
+      "id": "arthur_06",
+      "speaker": "Arthur Crane",
+      "text": "Take as much time as you need away from the press. Your position is safe. I'll see to the children if you need.",
+      "portrait": "arthur",
+      "next": "arthur_tip"
+    },
+    {
+      "id": "arthur_tip",
+      "speaker": "Arthur Crane",
+      "text": "There was a story — unverified, I couldn't run it — about Councillor Hargrove and his Whitmore Street properties. Clara might have crossed paths with that world through her charity work.",
+      "portrait": "arthur",
+      "next": "arthur_tip_02",
+      "set_flags": [{ "name": "hargrove_mentioned", "value": true }]
+    },
+    {
+      "id": "arthur_tip_02",
+      "speaker": "Arthur Crane",
+      "text": "It's probably nothing. But if she'd got involved in something involving Hargrove — that's a dangerous man.",
+      "portrait": "arthur",
+      "next": "end",
+      "journal_entry": "Arthur pointed me toward Hargrove. He seemed genuinely shaken by Clara's death. He's known me fifteen years."
+    }
+  ]
+}

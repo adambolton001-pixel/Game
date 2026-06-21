@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/rooms/RoomBase.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="3"]
+[ext_resource type="Script" path="res://scripts/objects/NPC.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/objects/ClueItem.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/rooms/ExitTrigger.gd" id="6"]
+
+[node name="PrintShop" type="Node2D"]
+script = ExtResource("1")
+room_id = "print_shop"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(400, 580)
+
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(400, 580)
+
+[node name="HUD" parent="." instance=ExtResource("3")]
+
+[node name="ArthurCrane" type="Area2D" parent="."]
+script = ExtResource("4")
+npc_name = "Arthur Crane"
+dialogue_id = "arthur_crane_01"
+position = Vector2(900, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArthurCrane"]
+
+[node name="SilasWebb" type="Area2D" parent="."]
+script = ExtResource("4")
+npc_name = "Silas Webb"
+dialogue_id = "silas_webb"
+position = Vector2(1300, 520)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SilasWebb"]
+
+[node name="DiscrepancyNote" type="Area2D" parent="."]
+script = ExtResource("5")
+clue_id = "ripper_discrepancy_clue"
+display_name = "Edmund's Notes"
+description = "Your own handwriting — things you've noticed that don't add up."
+dialogue_id = "ripper_discrepancy"
+one_shot = true
+position = Vector2(600, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DiscrepancyNote"]
+
+[node name="ExitToHome" type="Area2D" parent="."]
+script = ExtResource("6")
+target_room = "hale_home"
+position = Vector2(100, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitToHome"]
+
+[node name="ExitToStreet" type="Area2D" parent="."]
+script = ExtResource("6")
+target_room = "whitmore_street"
+requires_flag = "hargrove_mentioned"
+requires_flag_value = true
+position = Vector2(1850, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitToStreet"]

@@ -1,0 +1,49 @@
+{
+  "id": "arthur_crane_02",
+  "start_node": "arthur_redirect",
+  "nodes": [
+    {
+      "id": "arthur_redirect",
+      "speaker": "Arthur Crane",
+      "text": "You look terrible, Edmund. Are the children eating?",
+      "portrait": "arthur",
+      "next": "arthur_redirect_02"
+    },
+    {
+      "id": "arthur_redirect_02",
+      "speaker": "Arthur Crane",
+      "text": "I've been thinking about what you said. About the Ripper detail that didn't fit. I did some digging.",
+      "portrait": "arthur",
+      "next": "arthur_redirect_03"
+    },
+    {
+      "id": "arthur_redirect_03",
+      "speaker": "Arthur Crane",
+      "text": "Spoke to a man at the Met. Off the record. He said the scene was consistent with the previous killings. The constable on duty may have been... overzealous in his report.",
+      "portrait": "arthur",
+      "next": "edmund_doubt"
+    },
+    {
+      "id": "edmund_doubt",
+      "speaker": "Edmund",
+      "text": "That's not what I saw.",
+      "portrait": "edmund",
+      "next": "arthur_redirect_04"
+    },
+    {
+      "id": "arthur_redirect_04",
+      "speaker": "Arthur Crane",
+      "text": "Edmund. You found your wife in an alley at midnight. I am not dismissing what you saw. But grief does extraordinary things to memory.",
+      "portrait": "arthur",
+      "next": "arthur_redirect_05"
+    },
+    {
+      "id": "arthur_redirect_05",
+      "speaker": "Arthur Crane",
+      "text": "That said — Hargrove. Have you spoken to anyone at Whitmore Street yet? I think that's still your best thread.",
+      "portrait": "arthur",
+      "next": "end",
+      "journal_entry": "Arthur says the police think it matches the Ripper after all. He was so certain, so calm about it. And then he steered me back to Hargrove again."
+    }
+  ]
+}

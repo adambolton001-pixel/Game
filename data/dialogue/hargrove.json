@@ -1,0 +1,88 @@
+{
+  "id": "hargrove",
+  "start_node": "hargrove_01",
+  "nodes": [
+    {
+      "id": "hargrove_01",
+      "speaker": "Councillor Hargrove",
+      "text": "I don't receive visitors without an appointment. Who let you in here?",
+      "portrait": "hargrove",
+      "next": "edmund_harg_01"
+    },
+    {
+      "id": "edmund_harg_01",
+      "speaker": "Edmund",
+      "text": "My name is Edmund Hale. My wife is dead. She was investigating your Whitmore Street properties.",
+      "portrait": "edmund",
+      "next": "hargrove_02"
+    },
+    {
+      "id": "hargrove_02",
+      "speaker": "Councillor Hargrove",
+      "text": "I'm very sorry for your loss. But I have nothing to do with whatever your wife involved herself in.",
+      "portrait": "hargrove",
+      "next": "hargrove_approach"
+    },
+    {
+      "id": "hargrove_approach",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "choices": [
+        {
+          "text": "I have a witness. A resident of number twelve, Whitmore Street. She'll testify about the roof collapse.",
+          "lantern": 0,
+          "next": "hargrove_rattled"
+        },
+        {
+          "text": "I work at the Chronicle. I can make your name very prominent in tomorrow's edition.",
+          "lantern": 0,
+          "next": "hargrove_threatened_press"
+        },
+        {
+          "text": "[Grab him by the collar.] A child died in your building. You paid the family to disappear. Tell me what you did.",
+          "lantern": -2,
+          "next": "hargrove_attacked",
+          "set_flags": [{ "name": "attacked_hargrove", "value": true }]
+        }
+      ]
+    },
+    {
+      "id": "hargrove_rattled",
+      "speaker": "Councillor Hargrove",
+      "text": "Be very careful, Mr Hale. You are making accusations about a city councillor based on the word of a slum-dweller.",
+      "portrait": "hargrove",
+      "next": "hargrove_deny"
+    },
+    {
+      "id": "hargrove_threatened_press",
+      "speaker": "Councillor Hargrove",
+      "text": "The Chronicle runs on my advertising budget. You go ahead and test that relationship.",
+      "portrait": "hargrove",
+      "next": "hargrove_deny"
+    },
+    {
+      "id": "hargrove_attacked",
+      "speaker": "Councillor Hargrove",
+      "text": "GET OFF ME — guards!",
+      "portrait": "hargrove",
+      "next": "hargrove_thrown_out"
+    },
+    {
+      "id": "hargrove_thrown_out",
+      "speaker": "",
+      "text": "Edmund is removed from the estate by force.",
+      "portrait": "",
+      "next": "end",
+      "journal_entry": "They threw me out. But Hargrove was frightened — genuinely frightened. He knows something."
+    },
+    {
+      "id": "hargrove_deny",
+      "speaker": "Councillor Hargrove",
+      "text": "Your wife wrote to the Chronicle. I know that. Mr Crane assured me that letter would go no further. I suggest you speak to him.",
+      "portrait": "hargrove",
+      "next": "end",
+      "journal_entry": "Hargrove knows about Clara's letter. He said Arthur Crane assured him it would go no further. Arthur. Why did Arthur tell him that?"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "arthur_crane_final",
+  "start_node": "confrontation_01",
+  "nodes": [
+    {
+      "id": "confrontation_01",
+      "speaker": "Edmund",
+      "text": "You received her letter, Arthur. Three weeks before she died. She told you about Hargrove and you buried it.",
+      "portrait": "edmund",
+      "next": "arthur_pause"
+    },
+    {
+      "id": "arthur_pause",
+      "speaker": "Arthur Crane",
+      "text": "...",
+      "portrait": "arthur",
+      "next": "arthur_sits"
+    },
+    {
+      "id": "arthur_sits",
+      "speaker": "Arthur Crane",
+      "text": "Close the door, Edmund.",
+      "portrait": "arthur",
+      "next": "arthur_confession_01"
+    },
+    {
+      "id": "arthur_confession_01",
+      "speaker": "Arthur Crane",
+      "text": "Hargrove funds thirty percent of our printing contracts. Do you understand what that means? The paper. The jobs. Everyone here.",
+      "portrait": "arthur",
+      "next": "arthur_confession_02"
+    },
+    {
+      "id": "arthur_confession_02",
+      "speaker": "Arthur Crane",
+      "text": "I went to her. I asked her to stop. I explained what was at stake. She said that people were dying in those buildings and she didn't care about printing contracts.",
+      "portrait": "arthur",
+      "next": "arthur_confession_03"
+    },
+    {
+      "id": "arthur_confession_03",
+      "speaker": "Arthur Crane",
+      "text": "She was right, of course. She was always right about those things. That was Clara.",
+      "portrait": "arthur",
+      "next": "edmund_reaction"
+    },
+    {
+      "id": "edmund_reaction",
+      "speaker": "Edmund",
+      "text": "You killed her.",
+      "portrait": "edmund",
+      "next": "arthur_confession_04"
+    },
+    {
+      "id": "arthur_confession_04",
+      "speaker": "Arthur Crane",
+      "text": "I protected what I'd built. What we'd built. You, Edmund — fifteen years. I taught you this trade.",
+      "portrait": "arthur",
+      "next": "arthur_confession_05"
+    },
+    {
+      "id": "arthur_confession_05",
+      "speaker": "Arthur Crane",
+      "text": "I didn't want it to be this way. I want you to believe that.",
+      "portrait": "arthur",
+      "next": "final_choice"
+    },
+    {
+      "id": "final_choice",
+      "speaker": "",
+      "text": "",
+      "portrait": "",
+      "choices": [
+        {
+          "text": "[BRIGHT] I'm going to the police. And then I'm going to every paper in London with your name on the front page.",
+          "lantern": 2,
+          "next": "ending_bright",
+          "set_flags": [{ "name": "ending", "value": "bright" }]
+        },
+        {
+          "text": "[DIM] You're going to confess. Publicly. Or I print everything — including what this says about you.",
+          "lantern": 0,
+          "next": "ending_mid",
+          "set_flags": [{ "name": "ending", "value": "mid" }]
+        },
+        {
+          "text": "[DARK] Stand up.",
+          "lantern": -3,
+          "next": "ending_dark",
+          "set_flags": [{ "name": "ending", "value": "dark" }]
+        }
+      ]
+    },
+    {
+      "id": "ending_bright",
+      "speaker": "Arthur Crane",
+      "text": "You'll destroy the paper.",
+      "portrait": "arthur",
+      "next": "ending_bright_02"
+    },
+    {
+      "id": "ending_bright_02",
+      "speaker": "Edmund",
+      "text": "Good.",
+      "portrait": "edmund",
+      "next": "end"
+    },
+    {
+      "id": "ending_mid",
+      "speaker": "Arthur Crane",
+      "text": "...You've become harder than I remember.",
+      "portrait": "arthur",
+      "next": "ending_mid_02"
+    },
+    {
+      "id": "ending_mid_02",
+      "speaker": "Edmund",
+      "text": "You did that.",
+      "portrait": "edmund",
+      "next": "end"
+    },
+    {
+      "id": "ending_dark",
+      "speaker": "Arthur Crane",
+      "text": "Edmund. Think about what you're—",
+      "portrait": "arthur",
+      "next": "ending_dark_02"
+    },
+    {
+      "id": "ending_dark_02",
+      "speaker": "",
+      "text": "The lantern goes out.",
+      "portrait": "",
+      "next": "end"
+    }
+  ]
+}

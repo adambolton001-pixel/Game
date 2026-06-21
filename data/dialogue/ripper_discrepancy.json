@@ -1,0 +1,29 @@
+{
+  "id": "ripper_discrepancy",
+  "start_node": "discrepancy_01",
+  "nodes": [
+    {
+      "id": "discrepancy_01",
+      "speaker": "Edmund",
+      "text": "I've set the type on every Ripper story we've run. I know the details better than most constables.",
+      "portrait": "edmund",
+      "next": "discrepancy_02"
+    },
+    {
+      "id": "discrepancy_02",
+      "speaker": "Edmund",
+      "text": "Clara's body was positioned facing west. The Ripper's victims are always found facing east — toward the light, the papers said. We never printed that detail.",
+      "portrait": "edmund",
+      "next": "discrepancy_03"
+    },
+    {
+      "id": "discrepancy_03",
+      "speaker": "Edmund",
+      "text": "Whoever did this knew the Ripper's method. But they didn't know that one thing. Because it was never published.",
+      "portrait": "edmund",
+      "next": "end",
+      "collect_clue": "ripper_discrepancy_clue",
+      "journal_entry": "The body was positioned wrong. The killer knew the Ripper's pattern but missed one unpublished detail. Someone who reads our copy — but not someone who has seen the actual crime scenes."
+    }
+  ]
+}

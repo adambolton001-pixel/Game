@@ -1,13 +1,15 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://scripts/rooms/RoomBase.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://scenes/ui/dialogue.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/ui/lantern_meter.tscn" id="4"]
-[ext_resource type="Script" path="res://scripts/objects/NPC.gd" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="3"]
+[ext_resource type="Script" path="res://scripts/objects/NPC.gd" id="4"]
+[ext_resource type="Script" path="res://scripts/rooms/ExitTrigger.gd" id="5"]
+[ext_resource type="Script" path="res://scripts/objects/ClueItem.gd" id="6"]
 
 [node name="HaleHome" type="Node2D"]
 script = ExtResource("1")
+room_id = "hale_home"
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
@@ -20,12 +22,10 @@ position = Vector2(500, 600)
 [node name="Player" parent="." instance=ExtResource("2")]
 position = Vector2(500, 600)
 
-[node name="DialogueBox" parent="." instance=ExtResource("3")]
-
-[node name="LanternMeter" parent="." instance=ExtResource("4")]
+[node name="HUD" parent="." instance=ExtResource("3")]
 
 [node name="MrsWebb" type="Area2D" parent="."]
-script = ExtResource("5")
+script = ExtResource("4")
 npc_name = "Mrs Webb"
 dialogue_id = "neighbours"
 position = Vector2(900, 500)
@@ -33,14 +33,40 @@ position = Vector2(900, 500)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MrsWebb"]
 
 [node name="Thomas" type="Area2D" parent="."]
-script = ExtResource("5")
+script = ExtResource("4")
 npc_name = "Thomas"
 dialogue_id = "thomas_intro"
 position = Vector2(700, 450)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Thomas"]
 
+[node name="Rosie" type="Area2D" parent="."]
+script = ExtResource("4")
+npc_name = "Rosie"
+dialogue_id = "rosie"
+position = Vector2(550, 520)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rosie"]
+
+[node name="ThomasWithLetter" type="Area2D" parent="."]
+script = ExtResource("4")
+npc_name = "Thomas"
+dialogue_id = "thomas_finds_letter"
+position = Vector2(700, 450)
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ThomasWithLetter"]
+
 [node name="ExitToAlley" type="Area2D" parent="."]
-position = Vector2(1800, 540)
+script = ExtResource("5")
+target_room = "alley"
+position = Vector2(1850, 540)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitToAlley"]
+
+[node name="ExitToPrintShop" type="Area2D" parent="."]
+script = ExtResource("5")
+target_room = "print_shop"
+position = Vector2(960, 80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitToPrintShop"]

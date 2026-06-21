@@ -1,0 +1,105 @@
+{
+  "id": "thomas_finds_letter",
+  "start_node": "thomas_letter_01",
+  "nodes": [
+    {
+      "id": "thomas_letter_01",
+      "speaker": "Thomas",
+      "text": "Papa. I went to the print shop last night. I know you told me not to.",
+      "portrait": "thomas",
+      "next": "thomas_letter_02"
+    },
+    {
+      "id": "thomas_letter_02",
+      "speaker": "Thomas",
+      "text": "I wanted to look at his desk. Mr Crane's desk. I don't know why. Something felt wrong about him.",
+      "portrait": "thomas",
+      "next": "thomas_letter_03"
+    },
+    {
+      "id": "thomas_letter_03",
+      "speaker": "Thomas",
+      "text": "The bottom drawer was locked. I used Mama's hair pin. She taught me how.",
+      "portrait": "thomas",
+      "next": "thomas_letter_04"
+    },
+    {
+      "id": "thomas_letter_04",
+      "speaker": "Thomas",
+      "text": "Papa. It's her handwriting.",
+      "portrait": "thomas",
+      "next": "thomas_letter_05"
+    },
+    {
+      "id": "thomas_letter_05",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "next": "thomas_letter_06"
+    },
+    {
+      "id": "thomas_letter_06",
+      "speaker": "Edmund",
+      "text": "Give it to me.",
+      "portrait": "edmund",
+      "next": "thomas_letter_07"
+    },
+    {
+      "id": "thomas_letter_07",
+      "speaker": "Thomas",
+      "text": "She wrote to him. She trusted him. And he—",
+      "portrait": "thomas",
+      "next": "thomas_letter_08"
+    },
+    {
+      "id": "thomas_letter_08",
+      "speaker": "Edmund",
+      "text": "Thomas. Look at me.",
+      "portrait": "edmund",
+      "next": "thomas_protect_choice"
+    },
+    {
+      "id": "thomas_protect_choice",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "choices": [
+        {
+          "text": "You did right. Your mother would be proud of you.",
+          "lantern": 1,
+          "next": "thomas_proud",
+          "collect_clue": "arthur_desk_letter"
+        },
+        {
+          "text": "Don't ask me what I'm going to do with this. Go home. Stay with Rosie.",
+          "lantern": -1,
+          "next": "thomas_shut_out_again",
+          "collect_clue": "arthur_desk_letter"
+        }
+      ]
+    },
+    {
+      "id": "thomas_proud",
+      "speaker": "Thomas",
+      "text": "What are you going to do?",
+      "portrait": "thomas",
+      "next": "thomas_proud_02"
+    },
+    {
+      "id": "thomas_proud_02",
+      "speaker": "Edmund",
+      "text": "What she would have done.",
+      "portrait": "edmund",
+      "next": "end",
+      "journal_entry": "Thomas found her letter. He used her hair pin to pick the lock. She taught him that. She's still here in everything."
+    },
+    {
+      "id": "thomas_shut_out_again",
+      "speaker": "Thomas",
+      "text": "Papa — are you alright? You're frightening me.",
+      "portrait": "thomas",
+      "next": "end",
+      "journal_entry": "Thomas is frightened of me now. The same look he gave me when I came home that night. I've become someone he doesn't recognise."
+    }
+  ]
+}
