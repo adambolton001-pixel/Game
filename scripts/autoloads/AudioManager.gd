@@ -1,8 +1,5 @@
 extends Node
 
-# Audio buses: Master, Music, SFX, Ambient
-# Call AudioManager.play_ambient("alley") etc.
-
 const AMBIENT_TRACKS := {
 	"alley": "res://assets/audio/ambient/alley_night.ogg",
 	"hale_home": "res://assets/audio/ambient/home_interior.ogg",
@@ -20,14 +17,22 @@ const SFX := {
 	"door_open": "res://assets/audio/sfx/door_creak.ogg",
 }
 
-@onready var music_player: AudioStreamPlayer = $MusicPlayer
-@onready var ambient_player: AudioStreamPlayer = $AmbientPlayer
-@onready var sfx_player: AudioStreamPlayer = $SFXPlayer
+var music_player: AudioStreamPlayer
+var ambient_player: AudioStreamPlayer
+var sfx_player: AudioStreamPlayer
 
 var _current_ambient: String = ""
 
 func _ready() -> void:
-	GameState.flag_changed.connect(_on_flag_changed)
+	music_player = AudioStreamPlayer.new()
+	music_player.bus = "Music"
+	add_child(music_player)
+	ambient_player = AudioStreamPlayer.new()
+	ambient_player.bus = "Ambient"
+	add_child(ambient_player)
+	sfx_player = AudioStreamPlayer.new()
+	sfx_player.bus = "SFX"
+	add_child(sfx_player)
 	LanternSystem.lantern_state_changed.connect(_on_lantern_state_changed)
 
 func play_ambient(room_id: String, crossfade: float = 1.5) -> void:
@@ -36,18 +41,11 @@ func play_ambient(room_id: String, crossfade: float = 1.5) -> void:
 	_current_ambient = room_id
 	var path: String = AMBIENT_TRACKS.get(room_id, "")
 	if path == "" or not ResourceLoader.exists(path):
-		ambient_player.stop()
 		return
 	var stream = load(path)
-	if crossfade > 0.0 and ambient_player.playing:
-		var tween := create_tween()
-		tween.tween_property(ambient_player, "volume_db", -40.0, crossfade)
-		await tween.finished
 	ambient_player.stream = stream
-	ambient_player.volume_db = -40.0
+	ambient_player.volume_db = -6.0
 	ambient_player.play()
-	var tween2 := create_tween()
-	tween2.tween_property(ambient_player, "volume_db", -6.0, crossfade)
 
 func play_sfx(sfx_id: String) -> void:
 	var path: String = SFX.get(sfx_id, "")
@@ -57,17 +55,16 @@ func play_sfx(sfx_id: String) -> void:
 	sfx_player.play()
 
 func set_music_volume(value: float) -> void:
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(value))
+	if AudioServer.get_bus_index("Music") >= 0:
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(value))
 
 func set_sfx_volume(value: float) -> void:
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value))
+	if AudioServer.get_bus_index("SFX") >= 0:
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value))
 
 func set_ambient_volume(value: float) -> void:
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Ambient"), linear_to_db(value))
-
-func _on_flag_changed(flag_name: String, _value) -> void:
-	if flag_name == "opening_played":
-		play_ambient("alley")
+	if AudioServer.get_bus_index("Ambient") >= 0:
+		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Ambient"), linear_to_db(value))
 
 func _on_lantern_state_changed(state: LanternSystem.LanternState) -> void:
 	match state:

@@ -1,21 +1,20 @@
 extends CanvasLayer
 
-# Handles all scene transitions with fade in/out.
-# Usage: SceneManager.go_to("alley") or SceneManager.go_to_file("res://scenes/...")
-
 signal transition_started
 signal transition_finished
 
 const FADE_DURATION := 0.4
 
-@onready var overlay: ColorRect = $Overlay
-
+var overlay: ColorRect
 var _transitioning: bool = false
 
 func _ready() -> void:
 	layer = 100
+	overlay = ColorRect.new()
+	overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
 	overlay.color = Color(0, 0, 0, 0)
 	overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(overlay)
 
 func go_to(room_id: String) -> void:
 	go_to_file("res://scenes/rooms/%s.tscn" % room_id)
