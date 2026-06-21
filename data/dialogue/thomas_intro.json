@@ -1,0 +1,83 @@
+{
+  "id": "thomas_intro",
+  "start_node": "thomas_01",
+  "nodes": [
+    {
+      "id": "thomas_01",
+      "speaker": "Thomas",
+      "text": "Papa. What happened? Nobody will tell me anything proper.",
+      "portrait": "thomas",
+      "next": "thomas_02"
+    },
+    {
+      "id": "thomas_02",
+      "speaker": "Thomas",
+      "text": "I can see it on your face. Just — just tell me.",
+      "portrait": "thomas",
+      "next": "tell_thomas_choice"
+    },
+    {
+      "id": "tell_thomas_choice",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "choices": [
+        {
+          "text": "Sit down, son. I need to tell you something.",
+          "lantern": 1,
+          "next": "thomas_told_gently"
+        },
+        {
+          "text": "Your mother is gone, Thomas. I'm going to find out why.",
+          "lantern": 0,
+          "next": "thomas_told_direct"
+        },
+        {
+          "text": "Go to bed. This isn't your concern.",
+          "lantern": -1,
+          "next": "thomas_shut_out",
+          "set_flags": [{ "name": "thomas_shut_out", "value": true }]
+        }
+      ]
+    },
+    {
+      "id": "thomas_told_gently",
+      "speaker": "Thomas",
+      "text": "...",
+      "portrait": "thomas",
+      "next": "thomas_told_gently_02"
+    },
+    {
+      "id": "thomas_told_gently_02",
+      "speaker": "Thomas",
+      "text": "I want to help. Whatever you need. I can — I can go places you can't. People don't notice me.",
+      "portrait": "thomas",
+      "next": "end",
+      "set_flags": [{ "name": "thomas_willing_to_help", "value": true }],
+      "journal_entry": "Thomas wants to help. He's fourteen. But he's right — people don't notice boys."
+    },
+    {
+      "id": "thomas_told_direct",
+      "speaker": "Thomas",
+      "text": "I know. I knew when you walked in. Let me come with you, Papa.",
+      "portrait": "thomas",
+      "next": "thomas_told_direct_02"
+    },
+    {
+      "id": "thomas_told_direct_02",
+      "speaker": "Edmund",
+      "text": "No. You stay here with Rosie.",
+      "portrait": "edmund",
+      "next": "end",
+      "set_flags": [{ "name": "thomas_waiting", "value": true }]
+    },
+    {
+      "id": "thomas_shut_out",
+      "speaker": "Thomas",
+      "text": "...Yes, Papa.",
+      "portrait": "thomas",
+      "next": "end",
+      "journal_entry": "The look on Thomas's face. Clara would have hated that."
+    }
+  ]
+}

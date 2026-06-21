@@ -1,0 +1,89 @@
+{
+  "id": "constable_rowe",
+  "start_node": "rowe_01",
+  "nodes": [
+    {
+      "id": "rowe_01",
+      "speaker": "Constable Rowe",
+      "text": "Nothing to see here, sir. Move along. This is police business.",
+      "portrait": "rowe",
+      "next": "edmund_01"
+    },
+    {
+      "id": "edmund_01",
+      "speaker": "Edmund",
+      "text": "That woman. I know her. She — she is my wife.",
+      "portrait": "edmund",
+      "next": "rowe_02"
+    },
+    {
+      "id": "rowe_02",
+      "speaker": "Constable Rowe",
+      "text": "I'm sorry for your loss. But there's nothing to be done tonight. Another Ripper killing. We'll file a report in the morning.",
+      "portrait": "rowe",
+      "next": "edmund_02"
+    },
+    {
+      "id": "edmund_02",
+      "speaker": "Edmund",
+      "text": "Another— no. This isn't the Ripper. Something is wrong. The way she— it doesn't match.",
+      "portrait": "edmund",
+      "next": "rowe_03"
+    },
+    {
+      "id": "rowe_03",
+      "speaker": "Constable Rowe",
+      "text": "I understand you're in shock, sir. Go home. Be with your children. Let us do our work.",
+      "portrait": "rowe",
+      "next": "edmund_grief_choice"
+    },
+    {
+      "id": "edmund_grief_choice",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "choices": [
+        {
+          "text": "Step back. Let them work.",
+          "lantern": 1,
+          "next": "rowe_dismissal"
+        },
+        {
+          "text": "This is NOT the Ripper. I know every detail of those killings — I set the type.",
+          "lantern": 0,
+          "next": "rowe_pushed",
+          "set_flags": [{ "name": "challenged_rowe", "value": true }]
+        },
+        {
+          "text": "Get your hands off me. You're closing this before it's begun.",
+          "lantern": -1,
+          "next": "rowe_hostile"
+        }
+      ]
+    },
+    {
+      "id": "rowe_dismissal",
+      "speaker": "Constable Rowe",
+      "text": "There's a good man. I'll send word when we know more.",
+      "portrait": "rowe",
+      "next": "end",
+      "journal_entry": "Rowe closed the case on the spot. They aren't looking for anyone."
+    },
+    {
+      "id": "rowe_pushed",
+      "speaker": "Constable Rowe",
+      "text": "You set type. I police the streets. Good night, Mr Hale.",
+      "portrait": "rowe",
+      "next": "end",
+      "journal_entry": "The detail that doesn't fit: I need to look at this again, when they're gone."
+    },
+    {
+      "id": "rowe_hostile",
+      "speaker": "Constable Rowe",
+      "text": "Sir, if you don't step back I will remove you from this alley by force. Your choice.",
+      "portrait": "rowe",
+      "next": "end",
+      "journal_entry": "Rowe. He moved too fast to close this. Why?"
+    }
+  ]
+}

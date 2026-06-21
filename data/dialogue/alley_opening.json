@@ -1,0 +1,50 @@
+{
+  "id": "alley_opening",
+  "start_node": "search_01",
+  "nodes": [
+    {
+      "id": "search_01",
+      "speaker": "",
+      "text": "Clara said she would be home by nine. It is past midnight.",
+      "portrait": "",
+      "next": "search_02"
+    },
+    {
+      "id": "search_02",
+      "speaker": "",
+      "text": "The fog is thick tonight. Gas lamps throw more shadow than light.",
+      "portrait": "",
+      "next": "search_03"
+    },
+    {
+      "id": "search_03",
+      "speaker": "",
+      "text": "She walked this way. She always walked this way.",
+      "portrait": "",
+      "next": "find_clara"
+    },
+    {
+      "id": "find_clara",
+      "speaker": "",
+      "text": "...",
+      "portrait": "",
+      "next": "find_clara_02",
+      "set_flags": [{ "name": "found_clara", "value": true }],
+      "journal_entry": "Clara. God. Clara."
+    },
+    {
+      "id": "find_clara_02",
+      "speaker": "",
+      "text": "No.",
+      "portrait": "",
+      "next": "find_clara_03"
+    },
+    {
+      "id": "find_clara_03",
+      "speaker": "",
+      "text": "No, no, no—",
+      "portrait": "",
+      "next": "end"
+    }
+  ]
+}

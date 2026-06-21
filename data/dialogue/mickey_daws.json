@@ -1,0 +1,106 @@
+{
+  "id": "mickey_daws",
+  "start_node": "mickey_01",
+  "nodes": [
+    {
+      "id": "mickey_01",
+      "speaker": "Mickey Daws",
+      "text": "Oi! This is my alley. Whatever it is you want, I don't have it.",
+      "portrait": "mickey",
+      "next": "mickey_02"
+    },
+    {
+      "id": "mickey_02",
+      "speaker": "Mickey Daws",
+      "text": "...You're the husband, aren't you. I seen your face on the street earlier.",
+      "portrait": "mickey",
+      "next": "edmund_01"
+    },
+    {
+      "id": "edmund_01",
+      "speaker": "Edmund",
+      "text": "You were here tonight. You see everything that passes through this alley. Tell me who was here.",
+      "portrait": "edmund",
+      "next": "mickey_scared"
+    },
+    {
+      "id": "mickey_scared",
+      "speaker": "Mickey Daws",
+      "text": "I don't want no trouble, mate. What I saw — that ain't the sort of thing a man talks about freely.",
+      "portrait": "mickey",
+      "next": "approach_choice"
+    },
+    {
+      "id": "approach_choice",
+      "speaker": "",
+      "text": "",
+      "portrait": "",
+      "choices": [
+        {
+          "text": "[I have money. Here, take it.] Two shillings. More if what you tell me is useful.",
+          "lantern": 0,
+          "next": "mickey_bribed",
+          "requires_flag": { "name": "has_money", "value": true }
+        },
+        {
+          "text": "[Steady.] I'm not going to hurt you. I just need to know who was near her tonight.",
+          "lantern": 1,
+          "next": "mickey_calmed"
+        },
+        {
+          "text": "[Grab him.] You're not going anywhere until you tell me what you saw.",
+          "lantern": -1,
+          "next": "mickey_grabbed"
+        },
+        {
+          "text": "[Dark.] I will make what happened in this alley tonight look gentle if you don't talk to me right now.",
+          "lantern": -2,
+          "next": "mickey_threatened",
+          "set_flags": [{ "name": "threatened_mickey", "value": true }]
+        }
+      ]
+    },
+    {
+      "id": "mickey_bribed",
+      "speaker": "Mickey Daws",
+      "text": "Alright. Alright. There was a man. Well-dressed. Coat and hat, proper gentleman. He went in after her. Came out quick.",
+      "portrait": "mickey",
+      "next": "mickey_info",
+      "journal_entry": "A well-dressed man followed Clara into the alley and left quickly. This was not random."
+    },
+    {
+      "id": "mickey_calmed",
+      "speaker": "Mickey Daws",
+      "text": "...There was a man. Toff, by the look of him. Nice coat. He followed her in. I — I should have done something. I know.",
+      "portrait": "mickey",
+      "next": "mickey_info",
+      "journal_entry": "A well-dressed man followed Clara into the alley and left quickly. This was not random."
+    },
+    {
+      "id": "mickey_grabbed",
+      "speaker": "Mickey Daws",
+      "text": "Alright, alright! A man! Gentleman's coat, top hat. He followed her in. Was out again inside two minutes. That's all I know, I swear it.",
+      "portrait": "mickey",
+      "next": "mickey_info",
+      "journal_entry": "A well-dressed man followed Clara into the alley and left quickly. This was not random."
+    },
+    {
+      "id": "mickey_threatened",
+      "speaker": "Mickey Daws",
+      "text": "Please — please. There was a man. Rich. Real proper gentleman. Followed her in, left in a hurry. I didn't see his face. Please.",
+      "portrait": "mickey",
+      "next": "mickey_info",
+      "journal_entry": "A well-dressed man followed Clara into the alley and left quickly. This was not random."
+    },
+    {
+      "id": "mickey_info",
+      "speaker": "Mickey Daws",
+      "text": "There was something else. He was carrying something when he came out. Small. Like papers, maybe. Or a book.",
+      "portrait": "mickey",
+      "next": "end",
+      "set_flags": [{ "name": "mickey_talked", "value": true }],
+      "collect_clue": "mickey_testimony",
+      "journal_entry": "The man took something from Clara. Papers. Or a book. What did she have?"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "neighbours",
+  "start_node": "mrs_webb_01",
+  "nodes": [
+    {
+      "id": "mrs_webb_01",
+      "speaker": "Mrs Webb",
+      "text": "Oh Edmund, love. We came as soon as we heard. I've got a pot of broth on. You'll eat.",
+      "portrait": "mrs_webb",
+      "next": "mrs_webb_02"
+    },
+    {
+      "id": "mrs_webb_02",
+      "speaker": "Mrs Webb",
+      "text": "Thomas has been so brave. He put Rosie to bed himself. Told her Clara had gone visiting.",
+      "portrait": "mrs_webb",
+      "next": "edmund_rosie"
+    },
+    {
+      "id": "edmund_rosie",
+      "speaker": "Edmund",
+      "text": "She'll need to know the truth eventually.",
+      "portrait": "edmund",
+      "next": "mrs_webb_03"
+    },
+    {
+      "id": "mrs_webb_03",
+      "speaker": "Mrs Webb",
+      "text": "Not tonight she won't. Let the child sleep.",
+      "portrait": "mrs_webb",
+      "next": "neighbour_choice"
+    },
+    {
+      "id": "neighbour_choice",
+      "speaker": "Edmund",
+      "text": "...",
+      "portrait": "edmund",
+      "choices": [
+        {
+          "text": "Thank you, Margaret. I don't know what we'd do without you.",
+          "lantern": 1,
+          "next": "mrs_webb_warmth"
+        },
+        {
+          "text": "I need to go back out. There's something I have to find.",
+          "lantern": 0,
+          "next": "mrs_webb_concern"
+        },
+        {
+          "text": "Leave me alone. All of you.",
+          "lantern": -1,
+          "next": "mrs_webb_hurt",
+          "set_flags": [{ "name": "pushed_neighbours", "value": true }]
+        }
+      ]
+    },
+    {
+      "id": "mrs_webb_warmth",
+      "speaker": "Mrs Webb",
+      "text": "She loved you very much, Edmund. You know that. Whatever happens next — that was real.",
+      "portrait": "mrs_webb",
+      "next": "end",
+      "journal_entry": "The neighbours came. People who knew Clara. She was loved. I keep forgetting that."
+    },
+    {
+      "id": "mrs_webb_concern",
+      "speaker": "Mrs Webb",
+      "text": "Edmund — please. Not tonight. Your children need to see their father, not an empty chair.",
+      "portrait": "mrs_webb",
+      "next": "end"
+    },
+    {
+      "id": "mrs_webb_hurt",
+      "speaker": "Mrs Webb",
+      "text": "...Of course. I'll leave the broth on the step.",
+      "portrait": "mrs_webb",
+      "next": "end",
+      "journal_entry": "I sent them away. Good people who loved her. What am I becoming?"
+    }
+  ]
+}
